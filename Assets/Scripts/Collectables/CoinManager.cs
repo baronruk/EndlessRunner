@@ -20,7 +20,7 @@ public class CoinManager : MonoBehaviour
     }
 
     void Update() {
-        if (Mathf.Abs(_startingPoint-_player.transform.position.z) >= 75)
+        if (Mathf.Abs(_startingPoint-_player.transform.position.z) >= 75f)
         {
             _startingPoint = _player.transform.position.z;
             SpawnCoins(_player);
