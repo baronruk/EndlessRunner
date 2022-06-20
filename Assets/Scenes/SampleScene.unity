@@ -253,6 +253,7 @@ Transform:
   - {fileID: 1535947445}
   - {fileID: 1846336771}
   - {fileID: 737088707}
+  - {fileID: 453488245}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -544,7 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: -4.75
   maxX: 4.75
-  swerveSpeed: 0.8
+  swerveSpeed: 0.3
   Speed: 18
 --- !u!114 &452287630
 MonoBehaviour:
@@ -558,6 +559,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732c3c506b66b044c800298b956f67e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &453488244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453488245}
+  - component: {fileID: 453488246}
+  m_Layer: 0
+  m_Name: CoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453488245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453488244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 399970537}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453488246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453488244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91eff558e04f9e149b8438ef2a9cdee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coinPrefab: {fileID: 7369196282492800813, guid: 7f7d6e54f9272bf4f810980abc52aece, type: 3}
+  _coinsToSpawn: 5
 --- !u!1 &494655649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1357,6 @@ GameObject:
   - component: {fileID: 1388799102}
   - component: {fileID: 1388799101}
   - component: {fileID: 1388799105}
-  - component: {fileID: 1388799106}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1390,7 +1435,7 @@ Transform:
   m_GameObject: {fileID: 1388799100}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 150, y: 1, z: 10}
+  m_LocalScale: {x: 500, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1408,20 +1453,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 452287626}
---- !u!114 &1388799106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388799100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0672441b11f22347b86a4a0c02d357d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _coinPrefab: {fileID: 7369196282492800813, guid: 7f7d6e54f9272bf4f810980abc52aece, type: 3}
-  _coinsToSpawn: 10
 --- !u!1 &1535947444
 GameObject:
   m_ObjectHideFlags: 0
