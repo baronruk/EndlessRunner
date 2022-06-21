@@ -17,7 +17,6 @@ public class SubtractionChoiceSO : ChoiceSO
     public override string ShowChoice()
     {
         Number = Random.Range(_minSubtractionModifier, _maxSubtractionModifier);
-        Debug.Log("Minus " + Number);
         return "-" + Number;
     }
 
