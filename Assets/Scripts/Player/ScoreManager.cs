@@ -45,6 +45,12 @@ public class ScoreManager : MonoBehaviour
         _updatePlayerScore();
     }
 
+    public void  SquareRootOfScore()
+    {
+        _playerScore= Math.Sqrt(_playerScore);
+        _updatePlayerScore();
+    }
+
     private void _updatePlayerScore() 
     {
         string _message = " Score: " + _playerScore.ToString();

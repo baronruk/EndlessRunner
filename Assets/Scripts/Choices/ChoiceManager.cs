@@ -31,6 +31,9 @@ public class ChoiceManager : MonoBehaviour
             case Operation.Exponent:
                 _scoreManager.RaiseScoreToThePower(number);
                 break;
+            case Operation.Root:
+                _scoreManager.SquareRootOfScore();
+                break;
         }
     }
 

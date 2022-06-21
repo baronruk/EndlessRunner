@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Operation {
-    Add, Subtract, Multiply, Divide, Exponent
+    Add, Subtract, Multiply, Divide, Exponent, Root
 }
 
 public abstract class ChoiceSO : ScriptableObject, IChoice
