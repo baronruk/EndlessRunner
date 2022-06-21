@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     
     void OnEnable()
     {
+        Time.timeScale = 1f;
         _scoreManager = FindObjectOfType<ScoreManager>();
         _gameMenuManager = FindObjectOfType<GameMenuManager>();
         _nextLevelButton.onClick.AddListener(_gameMenuManager.Restart);
