@@ -28,6 +28,9 @@ public class ChoiceManager : MonoBehaviour
             case Operation.Divide:
                 _scoreManager.DivideScoreBy(number);
                 break;  
+            case Operation.Exponent:
+                _scoreManager.RaiseScoreToThePower(number);
+                break;
         }
     }
 

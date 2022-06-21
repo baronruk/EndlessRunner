@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text _playerScoreText;
-    private float _playerScore;
+    private double _playerScore;
     
     void OnEnable()
     {
@@ -34,6 +35,13 @@ public class ScoreManager : MonoBehaviour
     public void DivideScoreBy(float number) 
     {
         _playerScore= _playerScore/number;
+        _updatePlayerScore();
+    }
+
+    public void  RaiseScoreToThePower(float number)
+    {
+        
+        _playerScore= Math.Pow(_playerScore, number);
         _updatePlayerScore();
     }
 
