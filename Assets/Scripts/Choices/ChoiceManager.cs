@@ -39,6 +39,30 @@ public class ChoiceManager : MonoBehaviour
 
     public ChoiceSO GetRandomChoice() 
     {
-        return _choices[Random.Range(0, _choices.Length)];
+        /*
+            this function assumes that _choice[] has this exact order
+            _choice = [ 
+                AddChoice,
+                SubtractionChoice,
+                MultiplicationChoice,
+                DivisionChoice,
+                ExponentiationChoice
+                NthRootChoice,
+            ]
+        */
+        int _selector = Random.Range(0, 100);
+        if (_selector>=0 && _selector<25) {
+            return _choices[0];
+        } else if (_selector>=25 && _selector<50) {
+            return _choices[1];
+        } else if (_selector>=50 && _selector<70) {
+            return _choices[2];
+        } else if (_selector>=70 && _selector<90) {
+            return _choices[3];
+        } else if (_selector>=90 && _selector<95) {
+            return _choices[4];
+        } else {
+            return _choices[5];
+        }
     }
 }
