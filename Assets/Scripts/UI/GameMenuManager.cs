@@ -36,7 +36,7 @@ public class GameMenuManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(0);
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
     }
 
     private void Exit()
