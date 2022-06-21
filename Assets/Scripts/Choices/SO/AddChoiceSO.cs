@@ -22,7 +22,6 @@ public class AddChoiceSO : ChoiceSO
 
     public override void DoChoice()
     {
-        Debug.Log(Number);
         _scoreManager.IncreaseScoreBy(Number);
     }
 
