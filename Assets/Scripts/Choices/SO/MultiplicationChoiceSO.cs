@@ -17,7 +17,6 @@ public class MultiplicationChoiceSO : ChoiceSO
     public override string ShowChoice()
     {
         Number = Random.Range(_minMultiplicationModifier, _maxMultiplicationModifier);
-        Debug.Log("Multiply score by " + Number);
         return "x" + Number;
     }
 
