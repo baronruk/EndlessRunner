@@ -36,10 +36,10 @@ public class GameMenuManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
     }
 
-    public void Exit()
+    private void Exit()
     {
         Application.Quit();
     }

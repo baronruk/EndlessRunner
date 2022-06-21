@@ -9,12 +9,14 @@ public class ChoiceGates : MonoBehaviour
     [SerializeField] private ChoiceSO _choice;
     [SerializeField] private float _distanceToNextGate = 50f;
     private ChoiceManager _choiceManager;
+    private GameManager _gameManager;
     private int _totalGatesPairs;
     private Operation _operation;
     private float _number;
 
     void OnEnable()
     {
+        _gameManager = FindObjectOfType<GameManager>();
         _choiceManager = FindObjectOfType<ChoiceManager>();
         _choice = _choiceManager.GetRandomChoice();
         GetComponent<Renderer>().materials[0].color = _choice.GateColor;
@@ -28,6 +30,7 @@ public class ChoiceGates : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            _gameManager.UpdateGateCounter();
             _choiceManager.checkPlayerChoice(_operation, _number);
             transform.parent.position = _newGatePosition();
         }

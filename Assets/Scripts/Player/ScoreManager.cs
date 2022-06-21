@@ -51,6 +51,11 @@ public class ScoreManager : MonoBehaviour
         _updatePlayerScore();
     }
 
+    public string GetFinalScore()
+    {
+        return "Total Score: " + _playerScore;
+    }
+
     private void _updatePlayerScore() 
     {
         string _message = " Score: " + _playerScore.ToString();
