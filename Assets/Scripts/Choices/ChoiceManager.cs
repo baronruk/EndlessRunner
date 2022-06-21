@@ -50,16 +50,16 @@ public class ChoiceManager : MonoBehaviour
                 NthRootChoice,
             ]
         */
-        int _selector = Random.Range(0, 100);
-        if (_selector>=0 && _selector<25) {
+        int _selector = Random.Range(0, 1000);
+        if (_selector>=0 && _selector<300) {
             return _choices[0];
-        } else if (_selector>=25 && _selector<50) {
+        } else if (_selector>=300 && _selector<600) {
             return _choices[1];
-        } else if (_selector>=50 && _selector<70) {
+        } else if (_selector>=600 && _selector<775) {
             return _choices[2];
-        } else if (_selector>=70 && _selector<90) {
+        } else if (_selector>=775 && _selector<950) {
             return _choices[3];
-        } else if (_selector>=90 && _selector<95) {
+        } else if (_selector>=950 && _selector<975) {
             return _choices[4];
         } else {
             return _choices[5];
