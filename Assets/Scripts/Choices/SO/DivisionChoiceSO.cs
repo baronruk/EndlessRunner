@@ -17,7 +17,6 @@ public class DivisionChoiceSO : ChoiceSO
     public override string ShowChoice()
     {
         Number = Random.Range(_minDivisionModifier, _maxDivisionModifier);
-        Debug.Log("Divide score by " + Number);
         return "/" + Number;
     }
 
